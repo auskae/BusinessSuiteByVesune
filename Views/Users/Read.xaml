@@ -1,0 +1,39 @@
+﻿<Window x:Class="BusinessSuiteByVesune.Views.Users.Read"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BusinessSuiteByVesune.Views.Users"
+        mc:Ignorable="d"
+        Title="Read" Height="450" Width="800">
+    <Grid Name="MainGrid">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <GroupBox Header="Name" Grid.Row="0" Grid.Column="0">
+                <Label Name="LblName" Content="{Binding Path=Name, Mode=TwoWay}" />
+            </GroupBox>
+
+            <GroupBox Header="Pin" Grid.Row="0" Grid.Column="1">
+                <Label Name="LblPin" Content="{Binding Path=Pin, Mode=TwoWay}" />
+            </GroupBox>
+
+            <GroupBox Header="Currently Clocked In" Grid.Row="0" Grid.Column="2">
+                <Label Name="LblWorking" Content="{Binding Path=Working, Mode=TwoWay}" />
+            </GroupBox>
+
+            <Button Grid.Row="3" Grid.Column="0" Name="BtnCancel" Content="Cancel" Click="BtnCancel_Click" />
+        </Grid>
+    </Grid>
+</Window>
